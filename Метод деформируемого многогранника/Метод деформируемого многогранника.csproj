@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Метод_деформируемого_многогранника</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="FunctionParser">
+      <HintPath>..\..\FunctionParser\FunctionParser\bin\Debug\FunctionParser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

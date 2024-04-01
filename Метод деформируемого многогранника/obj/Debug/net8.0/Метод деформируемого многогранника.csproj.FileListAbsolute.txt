@@ -1,0 +1,18 @@
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\bin\Debug\net8.0\Метод деформируемого многогранника.exe
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\bin\Debug\net8.0\Метод деформируемого многогранника.deps.json
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\bin\Debug\net8.0\Метод деформируемого многогранника.runtimeconfig.json
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\bin\Debug\net8.0\Метод деформируемого многогранника.dll
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\bin\Debug\net8.0\Метод деформируемого многогранника.pdb
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\bin\Debug\net8.0\FunctionParser.dll
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\bin\Debug\net8.0\FunctionParser.pdb
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\obj\Debug\net8.0\Метод деформируемого многогранника.csproj.AssemblyReference.cache
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\obj\Debug\net8.0\Метод деформируемого многогранника.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\obj\Debug\net8.0\Метод деформируемого многогранника.AssemblyInfoInputs.cache
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\obj\Debug\net8.0\Метод деформируемого многогранника.AssemblyInfo.cs
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\obj\Debug\net8.0\Метод деформируемого многогранника.csproj.CoreCompileInputs.cache
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\obj\Debug\net8.0\Метод де.D4BBFE83.Up2Date
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\obj\Debug\net8.0\Метод деформируемого многогранника.dll
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\obj\Debug\net8.0\refint\Метод деформируемого многогранника.dll
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\obj\Debug\net8.0\Метод деформируемого многогранника.pdb
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\obj\Debug\net8.0\Метод деформируемого многогранника.genruntimeconfig.cache
+C:\Users\users\source\repos\Метод деформируемого многогранника\Метод деформируемого многогранника\obj\Debug\net8.0\ref\Метод деформируемого многогранника.dll
