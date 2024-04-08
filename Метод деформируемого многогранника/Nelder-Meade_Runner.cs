@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using FunctionParser;
@@ -90,18 +91,56 @@ namespace Метод_деформируемого_многогранника
         {
             List<Configuration> configurations = new List<Configuration>(100);
             Point.CalculateValue(startSimplex, exp);
-            Array.Sort(startSimplex, new ValueIncreasingComparer());
-            Point centre = Centre(startSimplex);
+            Configuration curConf = CreateConfiguration(startSimplex);
             
             return configurations;
         }
         public Configuration NextConfiguration(Configuration conf)
         {
-
+            Point[] newSimplex = Point.Clone(conf.simplex);
+            switch (conf.action)
+            {
+                case Actions.Reflection:
+                    newSimplex[n] = conf.reflectPoint;
+                    break;
+                case Actions.Stretching:
+                    newSimplex[n] = conf.stretchPoint;
+                    break;
+                case Actions.Compression:
+                    newSimplex[n] = conf.сompressPoint;
+                    break;
+                case Actions.GlobalCompression:
+                    GlobalComprerssion(newSimplex, exp);
+                    break;
+            }
+            return CreateConfiguration(newSimplex);
         }
         public Configuration CreateConfiguration(Point[] simplex)
         {
-
+            Point[] newSimplex = Point.Clone(simplex);
+            Array.Sort(newSimplex, new ValueIncreasingComparer());
+            Point centrePoint = Centre(simplex);
+            Point reflectPoint = Reflection(newSimplex, centrePoint, alpha, exp);
+            Point stretchPoint = null;
+            Point compressPoint = null;
+            if ((newSimplex[0].value <= reflectPoint.value) && (reflectPoint.value <= newSimplex[n - 1].value)) //Случай 1 (отражение)
+                return new Configuration(newSimplex, Actions.Reflection, centrePoint, reflectPoint, stretchPoint, null);
+            else if (reflectPoint.value < newSimplex[0].value) //Случаи 1 и 2 (отражение или растяжение)
+            {
+                stretchPoint = Stretching(centrePoint, reflectPoint, beta, exp);
+                if (stretchPoint.value < reflectPoint.value)
+                    return new Configuration(newSimplex, Actions.Stretching, centrePoint, reflectPoint, stretchPoint, compressPoint);
+                else
+                    return new Configuration(newSimplex, Actions.Reflection, centrePoint, reflectPoint, stretchPoint, compressPoint);
+            }
+            else//случаи 3 и 4 (сжатие или глобальное сжатие)
+            {
+                compressPoint = Compression(newSimplex, centrePoint, reflectPoint, gamma, exp);
+                if (compressPoint.value < Math.Min(newSimplex[n].value, reflectPoint.value))
+                    return new Configuration(newSimplex, Actions.Compression, centrePoint, reflectPoint, stretchPoint, compressPoint);
+                else
+                    return new Configuration(newSimplex, Actions.GlobalCompression, centrePoint, reflectPoint, stretchPoint, compressPoint);
+            }
         }
         bool StopCondition(Configuration conf)
         {
